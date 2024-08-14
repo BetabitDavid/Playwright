@@ -19,7 +19,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore /c/Git/Playwright/Playwright/PlaywrightXUnit/PlaywrightXUnitTests/PlaywrightXUnitTests.csproj
+      run: dotnet restore Playwright/Playwright.csproj
     - name: Build
       run: dotnet build --no-restore
     - name: Run Playwright tests
