@@ -14,14 +14,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
+    
     - name: Restore dependencies
       run: dotnet restore PlaywrightXUnitTests/PlaywrightXUnitTests.csproj
+    
     - name: Build
       run: dotnet build --no-restore
+    
     - name: Run Playwright tests
-      uses: microsoft/playwright-github-action@v1.5.5
-          
+      uses: microsoft/playwright-github-action@v1.5.5      
