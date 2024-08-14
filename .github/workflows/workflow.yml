@@ -33,4 +33,4 @@ jobs:
       run: pwsh ${{ github.workspace }}/PlaywrightXUnitTests/bin/Debug/net8.0/playwright.ps1 install --with-deps
     
     - name: Test
-      run: dotnet Test
+      run: dotnet test
